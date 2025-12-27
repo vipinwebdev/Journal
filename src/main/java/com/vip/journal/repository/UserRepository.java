@@ -1,6 +1,6 @@
-package com.vip.journalApp.repository;
+package com.vip.journal.repository;
 
-import com.vip.journalApp.entity.User;
+import com.vip.journal.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;

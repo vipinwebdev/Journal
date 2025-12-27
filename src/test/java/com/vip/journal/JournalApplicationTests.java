@@ -1,4 +1,4 @@
-package com.vip.journalApp;
+package com.vip.journal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

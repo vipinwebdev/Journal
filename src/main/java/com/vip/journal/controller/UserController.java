@@ -1,8 +1,10 @@
-package com.vip.journalApp.controller;
+package com.vip.journal.controller;
 
-import com.vip.journalApp.entity.User;
-import com.vip.journalApp.service.UserService;
+import com.vip.journal.entity.User;
+import com.vip.journal.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,12 +20,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping
-    public User save(@RequestBody User user) {
-        return userService.save(user);
-    }
-    @PutMapping("/{username}")
-    public User update(@RequestBody User user, @PathVariable String username) {
+
+    @PutMapping
+    public User update(@RequestBody User user) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
         return userService.updateUsers(username,user);
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.vip.journalApp.entity;
+package com.vip.journal.entity;
 
 import lombok.Data;
 import lombok.NonNull;
@@ -26,5 +26,7 @@ public class User {
 
     @DBRef
     private List<JournalEntry> journalEntries = new ArrayList<>();
+
+    private List<String> roles = new ArrayList<>();
 
 }

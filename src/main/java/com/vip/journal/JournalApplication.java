@@ -1,4 +1,4 @@
-package com.vip.journalApp;
+package com.vip.journal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
