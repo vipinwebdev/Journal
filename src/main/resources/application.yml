@@ -1,4 +1,10 @@
+server:
+  port: 8081
 spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://john_db_user:1Kjui74tpzheVuyn@cluster0.oioxobc.mongodb.net/?appName=Cluster0
+      database: journaldb
   mail:
     host: smtp.gmail.com
     port: 25
