@@ -29,4 +29,7 @@ public class User {
 
     private List<String> roles = new ArrayList<>();
 
+    private String email;
+    private boolean sentiments;
+
 }

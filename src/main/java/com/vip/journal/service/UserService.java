@@ -39,6 +39,7 @@ public class UserService {
         User userInDb = userRepository.findByUsername(username).orElseThrow(() -> new RuntimeException("Entry not found with username: " + username));
         userInDb.setUsername(user.getUsername());
         userInDb.setPassword(encoder.encode(user.getPassword()));
+        userInDb.setEmail(user.getEmail());
 
         return userRepository.save(userInDb);
     }
